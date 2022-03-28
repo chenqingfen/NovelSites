@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>观看小说页面</title>
+	</head>
+	<style>
+		body {
+			margin: 0;
+			position: relative;
+		}
+		
+		.myHead {
+			height: 120px;
+			width: 1200px;
+			margin: auto;
+		}
+		
+		#findBook {
+			border: 1px solid red;
+			width: 175px;
+			height: 20px;
+			position: absolute;
+			top: 40px;
+			left: 800px;
+		}
+		
+		#findButton {
+			position: absolute;
+			top: 40px;
+			left: 1000px;
+		}
+		
+		#myBook {
+			position: absolute;
+			text-decoration: none;
+			top: 45px;
+			right: 550px;
+		}
+		
+		#booktitle {
+			position: absolute;
+			left: 900px;
+			top:65px;
+		}
+		
+		#writer {
+			position: absolute;
+			left: 750px;
+			top: 125px;
+			color: gray;
+		}
+		
+		#title {
+			height: 30px;
+			width: 1200px;
+			background-color: goldenrod;
+			margin: auto;
+			top: 150px;
+			left: 360px;
+			position: absolute;
+			text-align: center;
+			font-size: 20px;
+		}
+		
+		#main {
+			width: 1200px;
+			height: 1000px;
+			background-color: #EEE8AA;
+			position: absolute;
+			top: 180px;
+			left: 360px;
+		}
+		
+		.wordstyle {
+			list-style-type: none;
+			float: left;
+			padding: 0;
+			margin: 0;
+		}
+		
+		.wordstyle a {
+			text-decoration: none;
+			color: black;
+			display: inline-block;
+			width: 400px;
+			height: 20px;
+			position: ;
+		}
+		
+		li {
+			padding: 0;
+			margin: 0;
+		}
+		
+		#ss {
+			width: 50px;
+			height: 50px;
+			position: fixed;
+			bottom: 10px;
+			right: 10px;
+			font-size: 16px;
+		}
+		
+		#ss a {
+			text-decoration: none;
+			color: black;
+			position: relative;
+		}
+		
+		#ss:hover {
+			background-color: yellow;
+		}
+		#jtimg{
+			position: absolute;
+			top: 10px;
+			left: 10px;
+		}
+		#seta{
+			text-decoration: none;
+			color: white;
+			background-color: red;
+		}
+	</style>
+
+	<body>
+		<div class="myHead">
+			<img src="img/悦读.jpg" />
+			<input type="text" name="find" id="findBook" placeholder="斗罗大陆" />
+			<input type="button" value="搜索" id="findButton" />
+			<div id="myBook">
+				<a href="my bookshelf.html" id="seta">我的书架</a>
+			</div>
+		</div>
+		<div id="booktitle">
+			<h2>逆天邪神</h2></div>
+		<div id="writer">作者：火星引力 &nbsp;&nbsp;更新时间:21小时前</div>
+		<div id="title">目录</div>
+		<div id="main"> 
+                        <!--
+                        	通过a标签完成各个章节  然后进行flex布局 同时设置div宽度和高度
+                        -->
+			
+           <li class=" wordstyle">
+					<a href="chapter.html" target="_blank" title="第0章  序章  ">第0章 序章 </a>
+				</li>
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第1章 云澈、萧澈  ">第1章 云澈、萧澈</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第2章 情不自禁  ">第2章 情不自禁</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第3章 你娶我？  ">第3章 你娶我？</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第4章 迎亲  ">第4章 迎亲</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第5章 大婚  ">第5章 大婚</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第6章 绝代风华  ">第6章 绝代风华</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第7章 冰云仙宫 ">第7章 冰云仙宫</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第8章 大婚之夜  ">第8章 大婚之夜</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第9章 老婆，你睡了吗？  ">第9章 老婆，你睡了吗？</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第10章 星隐草  ">第10章 星隐草</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第11章 红发少女  ">第11章 红发少女</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第12章 如果你不是我小姑妈……  ">第12章 如果你不是我小姑妈……</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第13章 危险的朦胧  ">第13章 危险的朦胧</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第14章 萧宗来信  ">第14章 萧宗来信</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第15章 萧玉龙的试探  ">第15章 萧玉龙的试探</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第16章 作死的萧大少  ">第16章 作死的萧大少</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第17章 我是神医，你信吗？  ">第17章 我是神医，你信吗？</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第18章 银针释寒  ">第18章 银针释寒</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第19章 通玄  ">第19章 通玄</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第20章 这可有意思了……  ">第20章 这可有意思了……</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第21章 同床共枕  ">第21章 同床共枕</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第22章 剧变(一)  ">第22章 剧变(一)</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第23章 剧变(二) ">第23章 剧变(二)</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第24章 剧变(三)  ">第24章 剧变(三)</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第25章 剧变(四)  ">第25章 剧变(四)</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第26章 剧变(五)  ">第26章 剧变(五)</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第27章 剧变(六)  ">第27章 剧变(六)</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第28章 剧变(七)  ">第28章 剧变(七)</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第29章 剧变(八)  ">第29章 剧变(八)</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第30章 剧变(九)  ">第30章 剧变(九)</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第31章 冰云七仙——楚月璃  ">第31章 冰云七仙——楚月璃</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第32章 冰仙威慑  ">第32章 冰仙威慑</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第33章 星隐，以血祭恨(上)  ">第33章 星隐，以血祭恨(上)</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第34章 星隐，以血祭恨(下)  ">第34章 星隐，以血祭恨(下)</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第35章 身世  ">第35章 身世</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第36章 我名云澈  ">第36章 我名云澈</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第37章 天灵神脉  ">第37章 天灵神脉</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第38章 “绝世圣者”  ">第38章 “绝世圣者”</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第39章 血染的茉莉(上)  ">第39章 血染的茉莉(上)</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第40章 血染的茉莉(中)  ">第40章 血染的茉莉(中)</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第41章 血染的茉莉(下)  ">第41章 血染的茉莉(下)</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第42章 茉莉为师(上)  ">第42章 茉莉为师(上)</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第43章 茉莉为师(下)  ">第43章 茉莉为师(下)</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第44章 邪神不灭之血  ">第44章 邪神不灭之血</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第45章 新生玄脉 ">第45章 新生玄脉</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第46章 邪神七境！">第46章 邪神七境！</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第47章 生死极限 ">第47章 生死极限</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第48章 邪神之种·火(一)  ">第48章 邪神之种·火(一)</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第49章 邪神之种·火(二)   ">第49章 邪神之种·火(二) </a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第50章 邪神之种·火(三)   ">第50章 邪神之种·火(三) </a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第51章 邪神之种·火(四) ">第51章 邪神之种·火(四) </a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第52章 邪神之种·火(五)  ">第52章 邪神之种·火(五) </a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第53章 邪神之种·火(六)   ">第53章 邪神之种·火(六) </a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第54章 茉莉的眼泪  ">第54章 茉莉的眼泪</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第55章 逆天之力 ">第55章 逆天之力</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第56章 星神碎影  ">第56章 星神碎影</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第57章 新月城、黑月商会  ">第57章 新月城、黑月商会</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第58章 虚张声势  ">第58章 虚张声势</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第59章 姐夫！？  ">第59章 姐夫！？</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第60章 新月玄府、司空寒  ">第60章 新月玄府、司空寒</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第61章 加入新月玄府  ">第61章 加入新月玄府</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第62章 蓝雪若  ">第62章 蓝雪若</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第63章 主殿  ">第63章 主殿</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第64章 一战惊城(一)  ">第64章 一战惊城(一)</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第65章 一战惊城(二)  ">第65章 一战惊城(二)</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第66章 一战惊城(三)  ">第66章 一战惊城(三)</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第67章 一战惊城(四)  ">第67章 一战惊城(四)</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第68章 一战惊城(五)  ">第68章 一战惊城(五)</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第69章 一战惊城(六)  ">第69章 一战惊城(六)</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第70章 一战惊城(七)  ">第70章 一战惊城(七)</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第71章 一战惊城(八)  ">第71章 一战惊城(八)</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第72章 一战惊城(九)  ">第72章 一战惊城(九)</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第73章 傲战陆斩南  ">第73章 傲战陆斩南</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第74章 爆！  ">第74章 爆！</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第75章 萧洛城  ">第75章 萧洛城</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第76章 我先毁了你！  ">第76章 我先毁了你！</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第77章 陨月沉星  ">第77章 陨月沉星</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第78章 废！  ">第78章 废！</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第79章 秦无忧  ">第79章 秦无忧</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第80章 云澈的心思 ">第80章 云澈的心思</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第81章 萧宗上门  ">第81章 萧宗上门</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第82章 弥天大祸  ">第82章 弥天大祸</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第83章 十天之期  ">第83章 十天之期</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第84章 唯一的可能……  ">第84章 唯一的可能……</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第85章 来而不往非礼也  ">第85章 来而不往非礼也</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第86章 盖世神医  ">第86章 盖世神医</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第87章 真特么巧！  ">第87章 真特么巧！</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第88章 一指通玄 ">第88章 一指通玄</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第89章 邪心圣手 ">第89章 邪心圣手</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第90章 通天医术  ">第90章 通天医术</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第91章 好孙儿，真是我的好孙儿。 ">第91章 好孙儿，真是我的好孙儿。</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第92章 宗门宝物库  ">第92章 宗门宝物库</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href=" " target="_blank" title="第93章 虎魄  ">第93章 虎魄</a>
+				</li>
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第94章 搜刮  ">第94章 搜刮</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第95章 毒火铳  ">第95章 毒火铳</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第96章 逃亡(上) ">第96章 逃亡(上)</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第97章 逃亡(中)  ">第97章 逃亡(中) </a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第98章 逃亡(下)  ">第98章 逃亡(下)</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第99章 生死博弈  ">第99章 生死博弈</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第100章 坠落  ">第100章 坠落</a>
+				</li>
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第101章 凤凰遗族(上)  ">第101章 凤凰遗族(上)</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第102章 凤凰遗族(中)  ">第102章 凤凰遗族(中)</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第103章 凤凰遗族(下)  ">第103章 凤凰遗族(下)</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第104章 危机来临  ">第104章 危机来临</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第105章 黑魔  ">第105章 黑魔</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第106章 《凤凰颂世典·残卷》(一)  ">第106章 《凤凰颂世典·残卷》(一)</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第107章 《凤凰颂世典·残卷》(二)  ">第107章 《凤凰颂世典·残卷》(二)</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第108章 《凤凰颂世典·残卷》(三)  ">第108章 《凤凰颂世典·残卷》(三) </a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第109章 《凤凰颂世典·残卷》(四)  ">第109章 《凤凰颂世典·残卷》(四)</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第110章 《凤凰颂世典·残卷》(五)   ">第110章 《凤凰颂世典·残卷》(五) </a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第111章 《凤凰颂世典·残卷》(六)   ">第111章 《凤凰颂世典·残卷》(六) </a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第112章 《凤凰颂世典·残卷》(七)  ">第112章 《凤凰颂世典·残卷》(七)</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第113章 《凤凰颂世典·残卷》(八)  ">第113章 《凤凰颂世典·残卷》(八)</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第114章 山穷水尽  ">第114章 山穷水尽</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第115章 对不起，我来晚了  ">第115章 对不起，我来晚了</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第116章 秒杀  ">第116章 秒杀</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第117章 凤翼天穹舞  ">第117章 凤翼天穹舞</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第118章 焚星妖莲  ">第118章 焚星妖莲</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第119章 焚灭诅咒  ">第119章 焚灭诅咒</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第120章 前往苍风皇城  ">第120章 前往苍风皇城</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第121章 苍风玄府  ">第121章 苍风玄府</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第122章 重逢  ">第122章 重逢</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第123章 嫉恨  ">第123章 嫉恨</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第124章 内府天玄榜  ">第124章 内府天玄榜</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第125章 苍风帝皇  ">第125章 苍风帝皇</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第126章 玄力测试  ">第126章 玄力测试</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第127章 风越  ">第127章 风越</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第128章 你确定？  ">第128章 你确定？</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第129章 司空渡  ">第129章 司空渡</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第130章 作的一手好死 ">第130章 作的一手好死</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第131章 慕容逸  ">第131章 慕容逸</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第132章 约战！ ">第132章 约战！</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第133章 直入内府  ">第133章 直入内府</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第134章 霸王巨剑  ">第134章 霸王巨剑</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第135章 野鸡玄技×2  ">第135章 野鸡玄技×2</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第136章 大道浮屠诀  ">第136章 大道浮屠诀</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第137章 传音玉">第137章 传音玉</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第138章 天玄榜  ">第138章 天玄榜</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第139章 何为大道 ">第139章 何为大道</a>
+				</li>
+
+				<li class=" wordstyle">
+					<a href="" target="_blank" title="第140章 突破，真玄境  ">第140章 突破，真玄境</a>
+				</li>
+				
+
+			</li>
+
+		</div>
+		<div id="ss">
+			<a href="#myBook"><img src="img/箭头 上.png" id="jtimg"/></a>
+               <!--
+               设置箭头向上  设置位置为fixed，一直处于窗口的右下角
+               -->
+		</div>
+		<!--回到顶部-->
+
+	</body>
+
+</html>

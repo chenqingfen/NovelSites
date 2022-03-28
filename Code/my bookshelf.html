@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.myHead {
+			height: 80px;
+			width: 1200px;
+			background-color: pink;
+			margin: auto;
+			
+		}
+		body{
+			margin: 0px;
+			position: relative;
+		}
+		#as{
+			position: absolute;
+			top: 0px;
+			left: 480px;
+			color: red;
+			font-family: "宋体";
+		}
+		#rebody{
+			width: 1200px;
+			height: 500px;
+			background-color: #DCDCDC;
+			position: absolute;
+			top:80px;
+		}
+		#bookshelf{
+			width: 1200px;
+			height:430px;
+			background-color: beige;
+			border: 1px solid gainsboro;
+		}
+		.shelf{
+			float: left;
+			margin-left: 20px;
+			background-color: rgb(190,231,233);
+			margin-top: 15px;
+			margin-bottom: 15px;
+		}
+		#dis{
+			width: 1200px;
+			background-color: lightskyblue;
+			height: 25px;
+			display: flex;
+		}
+		.shelf1{
+			flex: 1;
+		}
+		#rea{     /*设置flex的格式*/ 
+			display: flex;
+			width: 1200px;
+		}
+		.shelf2{
+			flex: 1;   /*让各个部分平均分 好对齐*/ 
+			margin-top: 15px;
+		}
+		.setread{    /*设置开始阅读的格式*/ 
+			text-decoration: none;
+			background-color: red;
+			color: white;
+		}
+		#ret{
+			position: absolute;     /*设置位置为绝对位置*/ 
+			top: 465px;
+			right: 10px;
+		}
+		#ret>a{
+			text-decoration: none;   /*设置没有下划线*/ 
+			color: black;   /*字体为黑色*/ 
+		}
+		
+		</style>
+	</head>
+	<body>
+		<div class="myHead">
+		<img src="img/图书1.jpg" />
+		<div id="as"><h1>我的书架</h1></div>
+		<div></div>
+		<div id="rebody">
+		  我的书架
+		  <div id="bookshelf">
+		  	<div class="shelf">全部</div>
+		  	<div class="shelf">玄幻</div>
+		  	<div class="shelf">修仙</div>
+		  	<div class="shelf">都市</div>
+		  	<div class="shelf">武侠</div>
+		  	<div class="shelf">异世</div>
+		  	<br /><br />
+		  	<div id="dis">
+		  	<div class="shelf1">类别</div>
+		  	<div class="shelf1">书名</div>
+		  	<div class="shelf1">作者</div>
+		  	<div class="shelf1">最新章节</div>
+		  	<div class="shelf1">操作</div>
+		  </div>
+		  <div id="rea">
+		  <div class="shelf2">玄幻</div>
+		  <div class="shelf2">逆天邪神</div>
+		  <div class="shelf2">火星引力</div>
+		  <div class="shelf2">第1775章</div>
+		  <div class="shelf2"><a class="setread" href="lookBook.html">开始阅读</a></div>
+		  </div>
+		  <div id="rea">
+		  <div class="shelf2">修仙</div>
+		  <div class="shelf2">剑来</div>
+		  <div class="shelf2">烽火戏诸侯</div>
+		  <div class="shelf2">第759章</div>
+		  <div class="shelf2"><a class="setread" href="#">开始阅读</a></div>
+		  </div>
+		  <div id="rea">
+		  <div class="shelf2">异世</div>
+		  <div class="shelf2">永夜君王</div>
+		  <div class="shelf2">烟雨江南</div>
+		  <div class="shelf2">第1823章</div>
+		  <div class="shelf2"><a class="setread" href="#">开始阅读</a></div>
+		  </div>
+		  <div id="rea">
+		  <div class="shelf2">异世</div>
+		  <div class="shelf2">万域之王</div>
+		  <div class="shelf2">逆苍天</div>
+		  <div class="shelf2">第1850章</div>
+		  <div class="shelf2"><a class="setread" href="#">开始阅读</a></div>
+		  </div>
+		  <div id="ret"><a href="index.html">返回首页</a></div>
+		  
+		  </div>
+		  	
+			
+		</div>
+	</body>
+</html>

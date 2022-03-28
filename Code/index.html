@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/样式1.css" />
+		<style type="text/css">
+			#bbox{
+				position: relative;
+			}
+			#bookShow {
+				background-image: url(img/1.jpg);
+				background-position: center;
+				/*width: 1200px;*/
+				/*过渡属性*/
+				transition: all 1s ease;
+				position: absolute;
+				left: 555px;
+			}
+			
+			#at {
+				position: absolute;
+				top: 30px;
+				left: 465px;
+			}
+			
+			#left-move {
+				background-image: url(img/sprite.png);
+				width: 50px;
+				height: 100px;
+				position: absolute;
+				top: 150px;
+				left: 20px;
+				/*170*/
+				opacity: 0;
+			}
+			
+			#right-move {
+				background-image: url(img/sprite.png);
+				background-position: 50px;
+				width: 50px;
+				height: 100px;
+				position: absolute;
+				top: 150px;
+				right: 20px;
+				opacity: 0;
+			}
+			
+			#bookShow>#left-move:hover {
+				opacity: 1;
+			}
+			
+			#bookShow>#right-move:hover {
+				opacity: 1;
+			}
+			
+			#img-tabs {
+				background-color: rgba(222, 222, 222, 0.3);
+				overflow: hidden;
+				/*子类为浮动，父类的高度依旧能撑开*/
+				display: inline-block;
+				/*既有行内的特点，又有块的特点*/
+				border-radius: 15px;
+				position: absolute;
+				bottom: 25px;
+				left: 30%;
+			}
+			
+			#img-tabs>div {
+				float: left;
+				font-size: 30px;
+				border-radius: 15px;
+				background-color: palegoldenrod;
+				line-height: 29px;
+				margin: 2px;
+			}
+			
+			#img-tabs>div:hover {
+				background-color: cornflowerblue;
+			}
+			
+			.rank1 {
+				width: 285px;
+				height: 410px;
+				background-color:#FFFACD;
+				float: left;
+				margin-left: 10px;
+				margin-top: 1px;
+			}
+			
+			hr {
+				border: 2px solid red;
+			}
+			
+			ul {
+				line-height: 30px;
+				list-style-position: inside;
+				float: left;
+				list-style-type: none;
+			}
+			
+			.book {
+				position: relative;
+			}
+			
+			.hot {
+				position: absolute;
+				left: 198px;
+				width: 40px;
+			}
+			
+			.bookname {
+				position: relative;
+			}
+			
+			.hot1 {
+				position: absolute;
+				left: 247px;
+			}
+			
+			.hot2 {
+				left: 535px;
+				position: absolute;
+			}
+			
+			.bookname1 {
+				position: relative;
+			}
+			
+			.bookname2 {
+				position: relative;
+			}
+			
+			.hot3 {
+				left: 840px;
+				position: absolute;
+			}
+			
+			.hot4 {
+				left: 1135px;
+				position: absolute;
+			}
+			
+			.number {
+				background-color: #A8A8A8;
+				color: #FFFFFF;
+			}
+			
+			.number1 {
+				background-color: red;
+				color: white;
+				font-size: 20px;
+			}
+			
+			.number2 {
+				background-color: goldenrod;
+				color: white;
+			}
+			
+			.number3 {
+				background-color: #FF7F00;
+				color: white;
+			}
+			.disg{
+				height: 50px;
+				width: 100px;
+				display: flex;
+				align-items:center;
+			}
+			#open-url{
+				height: 350px;
+				width: 1000px;
+			}
+			#bookDis{
+				position: absolute;
+				top: 120px;
+			}
+			#bookac{
+				position: absolute;
+				top: 120px;
+				left: 50%;
+			}
+			
+			
+			
+		</style>
+		<script type="text/javascript"> 
+			var interval = window.setInterval("rightImg()", 3000);
+			var index = 0;
+			var bout;
+			var tabArr;
+			var openUrl;
+			var imgArr = new Array();
+			imgArr[0] = "url(img/1.jpg)";
+			imgArr[1] = "url(img/2.png)";
+			imgArr[2] = "url(img/3.png)";
+			imgArr[3] = "url(img/4.png)";
+			imgArr[4] = "url(img/5.png)";
+			imgArr[5] = "url(img/6.png)";
+			
+			var urlArr = new Array();
+			urlArr[0] = "lookBook.html";
+			urlArr[1] = "https://book.qidian.com/info/1115277/";
+			urlArr[2] = "https://book.qidian.com/info/1209977";
+			urlArr[3] = "http://book.zongheng.com/book/342974.html?fr=pc_alading";
+			urlArr[4] = "https://book.qidian.com/info/1887208";
+			urlArr[5] = "https://book.qidian.com/info/1735921";
+
+			function rightImg() {
+				index++;
+				if(index > 5) {
+
+					index = 0;
+				}
+				changeImage();
+			}
+			function leftImg() {
+				index--;
+				if(index < 0) {
+
+					index = 5;
+				}
+
+				changeImage();
+
+			}
+
+
+			function changeIndex(i) {
+				index = i;
+				changeImage();
+
+			}
+
+			function changeImage() {
+
+				bout.style.backgroundImage = imgArr[index];
+
+				for(var i = 0; i < 6; i++) {
+					if(i == index) {
+						tabArr[i].style.backgroundColor = "red";
+
+					} else {
+						tabArr[i].style.backgroundColor = "palegoldenrod";
+
+					}
+
+				}
+
+			}
+			function stopInterval() {
+				window.clearInterval(interval);
+			}
+
+			function startInterval() {
+				interval = window.setInterval("rightImg()", 3000);
+			}
+
+			window.onload=function(){
+				bout = document.getElementById("bookShow");
+                tabArr = document.getElementsByClassName("img-tab");
+                openUrl = document.getElementById("open-url");
+
+				tabArr[0].style.backgroundColor = "red";
+				openUrl.onclick = function() {
+					window.open(urlArr[index]);
+
+				}
+				
+			}
+
+		</script>
+	</head>
+
+	<body>
+		<div class="myHead">
+			<img src="img/悦读.jpg" />
+			<img src="img/主页.jpg" id="at" />
+			<input type="text" name="find" id="findBook" placeholder="斗罗大陆" />
+			<input type="button" value="搜索" id="findButton" />
+			<div id="myBook">
+				<a href="my bookshelf.html">我的书架</a>
+			</div>
+		</div>
+		<div id="myTip">
+			<div id="bookDis"><h2>作品分类</h2></div>
+			<div id="bookac"><h2>书籍推荐</h2></div>
+		</div>
+		<div id="bbox">
+		<div id="box">
+			<!--
+            	这里box是大的div我对box进行设置	
+            	display: flex;
+				flex-wrap: wrap;
+				align-content: flex-start;
+				然后disg是小的div我对disg进行设置
+				display: flex;
+				align-items:center;  这个是让文字居中
+				
+            -->
+			<div class="disg"><img src="img/Dragon.png"><span>玄幻</span></div>
+			<div class="disg"><img src="img/龙族.png" /><span>奇幻</span></div>
+			<div class="disg"><img src="img/武侠.png" /><span>武侠</span></div>
+			<div class="disg"><img src="img/仙侠.png"/><span>仙侠</span></div>
+			<div class="disg"><img src="img/都市.png"/>都市</div>
+			<div class="disg"><img src="img/现实.png"/>现实</div>
+			<div class="disg"><img src="img/军事.png"/>军事</div>
+			<div class="disg"><img src="img/历史.png"/>历史</div>
+			<div class="disg"><img src="img/游戏.png"/>游戏</div>
+			<div class="disg"><img src="img/体育.png"/>体育</div>
+			<div class="disg"><img src="img/科幻.png"/>科幻</div>
+			<div class="disg"><img src="img/悬疑灵异.png"/>悬疑</div>
+			<div class="disg"><img src="img/异世界.png"/>异世</div>
+			<div class="disg"><img src="img/女生.png"/>女生</div>
+			</div>
+			<div id="bookShow" onmouseout="startInterval()" onmouseover="stopInterval()">
+				<div id="left-move" onclick="leftImg()"></div>
+				<div id="right-move" onclick="rightImg()"></div>
+				<div id="img-tabs">
+					<div class="img-tab" onclick="changeIndex(0)">✈</div>
+					<div class="img-tab" onclick="changeIndex(1)">✈</div>
+					<div class="img-tab" onclick="changeIndex(2)">✈</div>
+					<div class="img-tab" onclick="changeIndex(3)">✈</div>
+					<div class="img-tab" onclick="changeIndex(4)">✈</div>
+					<div class="img-tab" onclick="changeIndex(5)">✈</div>
+				</div>
+				<div id="open-url"></div>
+			</div>
+		</div>
+		<div id="rank">
+            <!--
+            	rank排行榜我是用position完成的
+            	class=number number1 number2是我对数字进行样式设置
+            	前三的颜色各不相同 4-10颜色都一样
+            -->
+			<div class="rank1">
+				<h2>玄幻小说排行榜</h2>
+				<hr />
+				<ul>
+					<li class="book">
+						<span class="number1">1</span><span>.遮天</span>
+						<span class="hot">35121</span>
+					</li>
+					<li>
+						<span class="number2">2</span><span class="bookname"><a href="lookBook.html">.逆天邪神</a></span>
+						<span class="hot1">32542</span>
+					</li>
+					<li><span class="number3">3</span><span class="bookname">.剑来</span>
+						<span class="hot1">32000</span>
+					</li>
+					<li><span class="number">4</span><span class="bookname">.元尊</span>
+						<span class="hot1">31245</span></li>
+					<li><span class="number">5</span><span class="bookname">.剑仙在此</span>
+						<span class="hot1">30010</span></li>
+					<li><span class="number">6</span><span class="bookname">.最强狂兵</span>
+						<span class="hot1">29588</span></li>
+					<li><span class="number">7</span><span class="bookname">.斗罗大陆</span>
+						<span class="hot1">29458</span></li>
+					<li><span class="number">8</span><span class="bookname">.永夜君王</span>
+						<span class="hot1">28546</span></li>
+					<li><span class="number">9</span><span class="bookname">.伏天氏</span>
+						<span class="hot1">27410</span></li>
+					<li><span class="number">10</span><span>.全职高手</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<span>26556</span></li>
+				</ul>
+
+			</div>
+			<div class="rank1">
+				<h2>收藏榜</h2>
+				<hr />
+				<ul>
+					<li>
+						<span class="number1">1</span><span>.圣墟</span>
+						<span class="hot2">450010</span>
+					</li>
+					<li>
+						<span class="number2">2</span><span class="bookname1"><a href="lookBook.html">.逆天邪神</a></span>
+						<span class="hot2">445050</span>
+					</li>
+					<li><span class="number3">3</span><span class="bookname1">.斗罗大陆</span>
+						<span class="hot2">435124</span>
+					</li>
+					<li><span class="number">4</span><span class="bookname1">.诡秘之主</span>
+						<span class="hot2">425158</span></li>
+					<li><span class="number">5</span><span class="bookname1">.遮天</span>
+						<span class="hot2">417898</span></li>
+					<li><span class="number">6</span><span class="bookname1">.斗破苍穹</span>
+						<span class="hot2">414565</span></li>
+					<li><span class="number">7</span><span class="bookname1">.武动乾坤</span>
+						<span class="hot2">402525</span></li>
+					<li><span class="number">8</span><span class="bookname1">.大主宰</span>
+						<span class="hot2">393945</span></li>
+					<li><span class="number">9</span><span class="bookname1">.伏天氏</span>
+						<span class="hot2">384565</span></li>
+					<li><span class="number">10</span><span>.永夜君王</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+						<span>378945</span></li>
+				</ul>
+			</div>
+			<div class="rank1">
+				<h2>24小时畅销榜</h2>
+				<hr />
+				<ul>
+					<li>
+						<span class="number1">1</span><span>.剑来</span>
+						<span class="hot3">25250</span>
+					</li>
+					<li>
+						<span class="number2">2</span><span class="bookname2"><a href="lookBook.html">.逆天邪神</a></span>
+						<span class="hot3">24320</span>
+					</li>
+					<li>
+						<span class="number3">3</span><span class="bookname2">.最强狂兵</span>
+						<span class="hot3">24310</span>
+					</li>
+					<li>
+						<span class="number">4</span><span class="bookname2">.一剑独尊</span>
+						<span class="hot3">23505</span></li>
+					<li><span class="number">5</span><span class="bookname2">.雪中悍刀行</span>
+						<span class="hot3">22504</span></li>
+					<li><span class="number">6</span><span class="bookname2">.元尊</span>
+						<span class="hot3">22489</span></li>
+					<li><span class="number">7</span><span class="bookname2">.斩龙</span>
+						<span class="hot3">21456</span></li>
+					<li><span class="number">8</span><span class="bookname2">.天行</span>
+						<span class="hot3">21321</span></li>
+					<li><span class="number">9</span><span class="bookname2">.斗罗大陆</span>
+						<span class="hot3">20102</span></li>
+					<li><span class="number">10</span><span>.盖世</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+						<span>20000</span></li>
+				</ul>
+			</div>
+			<div class="rank1">
+				<h2>礼物榜</h2>
+				<hr />
+				<ul>
+					<li>
+						<span class="number1">1</span><span>.第九战区</span>
+						<span class="hot4">14001</span>
+					</li>
+					<li>
+						<span class="number2">2</span><span class="bookname2"><a href="lookBook.html">.逆天邪神</a></span>
+						<span class="hot4">13550</span>
+					</li>
+					<li><span class="number3">3</span><span class="bookname2">.遮天</span>
+						<span class="hot4">13450</span>
+					</li>
+					<li><span class="number">4</span><span class="bookname2">.元尊</span>
+						<span class="hot4">12350</span></li>
+					<li><span class="number">5</span><span class="bookname2">.武极天下</span>
+						<span class="hot4">12110</span></li>
+					<li><span class="number">6</span><span class="bookname2">.伏天氏</span>
+						<span class="hot4">11240</span></li>
+					<li><span class="number">7</span><span class="bookname2">.斗罗大陆</span>
+						<span class="hot4">10502</span></li>
+					<li><span class="number">8</span><span class="bookname2">.永夜君王</span>
+						<span class="hot4">10441</span></li>
+					<li><span class="number">9</span><span class="bookname2">.圣墟</span>
+						<span class="hot4">10354</span></li>
+					<li><span class="number">10</span><span>大主宰</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+						<span>10254</span></li>
+				</ul>
+			</div>
+
+		</div>
+	</body>
+
+</html>

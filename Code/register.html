@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.header{
+				height: 120px;  /*设置高度和宽度  且设置自动居中*/
+				
+				width: 1200px;
+				margin: auto;
+			}
+			body{
+				margin: 0px;  /*设置外边距为0  就不会多一块出来*/
+			}
+			.box-center{
+				width: 1200px;  /*box-center是放两张图片的div*/
+				
+			}
+			#al{
+				position: absolute;
+				top: 30px;
+			}
+			.in{
+				width: 1200px;
+				height: 600px;
+				margin: auto; 
+				position: relative;      /*设置位置为相对定位*/ 
+				background-image: url(img/天空2.jpg);   /*设置背景*/ 
+				background-repeat: none;   /*设置图片不重复*/ 
+				top:0px;
+			}
+			
+			#a5{
+				position: absolute;
+				top: 100px;
+				left: 400px;
+				line-height: 40px;
+				font: "微软雅黑";
+				font-size: 20px;
+			}
+			.in-header{
+				position: absolute;   /*这个是设置注册信息的位置   position为绝对定位*/
+				top:0px;  
+				left: 500px;
+			}
+			#submit{                       /*提交按钮*/   
+				width: 100px;             /*设置高度和宽度*/   
+				height: 40px;
+				background-color: red;      /*设置背景为红色*/
+				color: white;             /*设置字体为白色*/
+				border: 1px solid red;  /*边框为红色 1px*/
+				text-align: center;
+				
+			}
+			#reset{                    /*重置按钮*/ 
+				width: 100px;
+				height: 40px;
+				background-color: gold;
+				color: white;
+				border: 1px solid gold;  
+				text-align: center;
+				margin-left: 75px;
+				
+			}
+			 input{
+                border: 1px solid #ccc;
+                padding: 7px 0px;
+                border-radius: 3px;    /*让边框四个角变成圆形*/ 
+                padding-left:5px;        /*内边距距离左边5px*/ 
+            }
+            
+            
+
+			
+		</style>
+		<script type="text/javascript">
+			function testEmail() {
+				//判断邮箱
+				var str = document.getElementById("email").value;
+				var re = /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/;  
+				if((re.test(str))) {
+					document.getElementById("show0").innerHTML = "<font color='green'>邮箱格式正确</font>"
+					return true;
+                    
+				} else {
+					document.getElementById("show0").innerHTML = "<font color='red'>邮箱格式错误</font>"
+					return false;
+				}
+			}
+
+			function testpwd() {
+				//判断密码格式是否正确
+				var str3 = document.getElementById("pwd").value;  //获取第一次密码的值
+				var reg3 = /^[a-zA-Z0-9]{6,10}$/;  //正则  小写字母 大写字母 数字 组成 6位到10位
+				if((reg3.test(str3))) {   //判断
+					document.getElementById("show1").innerHTML = "<font color='green'>格式正确</font>"
+					return true;
+				} else {
+					document.getElementById("show1").innerHTML = "<font color='red'>格式错误</font>"
+					return false;
+				}
+			}
+              //判断两次的密码一不一致
+			function testRepwd() {
+				var str3 = document.getElementById("pwd").value;   //获取第一次密码的值
+				var str4 = document.getElementById("repwd").value;//获取第二次密码的值
+				
+				if(str4 == str3&&str4!="") {  //如果两次密码一样则显示两次密码一样  且判断不为空
+					document.getElementById("show2").innerHTML = "<font color='green'>两次密码一样</font>"
+					return true;
+				} 
+				else if(str4==""){
+					document.getElementById("show2").innerHTML = "<font color='red'>密码不能为空</font>"
+				}
+				else{
+					document.getElementById("show2").innerHTML = "<font color='red'>两次密码不一样</font>"
+					return false;
+				}
+
+			}
+			//注册时点击检查三个格式
+			function checkAll()
+			{
+				if(testEmail()&&testpwd()&&testRepwd()) {   //点击注册是检查邮箱格式、检查密码、检查两次密码是否一样
+					alert("注册成功");          //如果都正确就显示注册成功
+					window.open("login.html");  //然后跳转到登陆的页面
+				}else{ 
+					alert("注册失败");   //如果有一个格式不对，就显示注册失败
+					
+				}
+			}
+			
+		</script>
+	</head>
+	<body>
+		<div class="whole">
+			<!-- 这是头部-->
+           <div class="header">
+             <div class="box-center">
+             	<img src="img/悦读.jpg" />
+             	<img src="img/注册.jpg"id="al" />
+             </div>
+           </div>
+           <!--头部结束-->
+           
+           
+           	<div class="in">
+           		<div class="in-header">
+           			<h2>注册信息</h2>
+           		</div>
+           		
+           		<!--利用form表单完成-->
+           		<form  >
+			<table id="a5">
+				<tr id="a1">
+					<td>邮箱:</td>
+					<td>
+						<input type="text" id="email" onblur="testEmail(this)" placeholder="请输入邮箱"/>
+						<span id="show0"></span>
+					</td>
+				</tr>
+				<tr id="a2">
+
+					<td>密码：</td>
+					<td>
+						<input type="password" id="pwd" onblur="testpwd(this)" placeholder="6-10位大小写字母"/>
+						<span id="show1"></span>
+	
+					</td>
+				</tr>
+				<tr id="a3">
+					<td>确认密码：</td>
+					<td><input type="password" id="repwd" onblur="testRepwd(this)" placeholder="再次输入密码"/>
+						
+						<span id="show2"></span>
+					</td>
+				</tr>
+				<tr id="a4">
+					<td>
+					<input type="submit" value="提交" onclick="checkAll()" id="submit" />	
+					</td>
+					<td>
+					<input type="reset" id="reset"/>
+					</td>
+				</tr>
+			</table>
+		</form>
+           	</div>
+			
+			
+			
+		</div>
+	</body>
+</html>

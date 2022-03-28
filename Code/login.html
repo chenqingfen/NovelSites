@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			function check() {
+				var email = document.getElementById("inp1").value;
+				var pwd = document.getElementById("inp2").value;
+				if(email== "1370484311@qq.com" && pwd=="a12345678") {
+					alert("登陆成功");
+					window.open("index.html",self);//登陆成功打开首页
+				} else {
+					alert("登陆失败");
+				}
+			}
+		</script>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.header{
+				height: 120px;
+				width: 1200px;
+				margin: auto;
+			}
+			body{
+				margin: 0px;
+			}
+			.box-center{
+				width: 1200px;
+				
+			}
+			#ad{
+				position: absolute;
+				top: 30px;
+			}
+			.in{
+				width: 1200px;
+				height: 600px;
+				margin: auto;
+				position: relative;
+				background-image: url(img/天空2.jpg);
+				background-repeat: none;
+				top:0px;
+			}
+			
+			#a5{
+				position: absolute;
+				top: 200px;
+				left: 400px;
+				line-height: 40px;
+				font: "微软雅黑";
+				font-size: 20px;
+			}
+			.in-header{
+				position: absolute;
+				top:130px;
+				left: 535px;
+			}
+			#submit{
+				width: 100px;
+				height: 40px;
+				background-color: red;
+				color: white;
+				border: 1px solid red;
+				text-align: center;
+				
+			}
+			#reset{
+				width: 100px;
+				height: 40px;
+				background-color: gold;
+				color: white;
+				border: 1px solid gold;
+				text-align: center;
+				margin-left: 75px;
+				
+			}
+			 input{
+                border: 1px solid #ccc;
+                padding: 7px 0px;
+                border-radius: 3px;
+                padding-left:5px;
+            }
+            
+            
+            
+
+			
+		</style>
+	</head>
+	<body>
+		<div class="whole">
+			<!-- 这是头部-->
+           <div class="header">
+             <div class="box-center">
+             	<img src="img/悦读.jpg" />
+             	<img src="img/用户登陆.png"id="ad" />
+             </div>
+           </div>
+           <!--头部结束-->
+           
+            <!--登陆主体-->
+           	<div class="in">
+           		<div class="in-header">
+           			<h2>登陆</h2>
+           		</div>
+           		
+           		<form  >
+			<table id="a5">
+				<tr id="a1">
+					<td>邮箱:</td>
+					<td>
+						<input type="text" id="inp1"  placeholder="请输入邮箱"/><!--placeholder是提供可描述输入字段预期值的提示信息-->
+					</td>
+				</tr>
+				<tr id="a2">
+
+					<td>密码：</td>
+					<td>
+						<input type="password" id="inp2"  placeholder="6-10位大小写字母"/>  
+					</td>
+				</tr>
+				<tr id="a4">
+					<td>
+					<input type="submit" value="登陆" onclick="check()" id="submit" />	  
+                                                                                          <!--
+                                                                                          	提交按钮  点击检查账号和密码
+                                                                                          -->
+					</td>
+					<td>
+					<input type="reset" id="reset"/>
+					</td>
+				</tr>
+			</table>
+		</form>
+           	</div>
+			
+			
+			
+		</div>
+	</body>
+</html>
+
